@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic API Integration Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <header class="app-header">
+            <h1>Inspirational Quotes Engine</h1>
+            <p>Asynchronous Data Retrieval Project using JavaScript Fetch API</p>
+        </header>
+
+        <main class="display-card">
+            <div class="card-body">
+                
+                <div id="loading-spinner" class="spinner-component" style="display: none;">
+                    <div class="circle-loader"></div>
+                    <p>Streaming API Data...</p>
+                </div>
+
+                <div id="content-display-area">
+                    <p id="quote-text" class="quote-style">
+                        "Click the action control engine button below to make an asynchronous network request to the public API endpoint gateway."
+                    </p>
+                    <span id="quote-author" class="author-style">— System Prompt</span>
+                </div>
+
+                <div id="error-message-panel" class="error-panel" style="display: none;">
+                    <div class="error-icon">⚠️</div>
+                    <h3>Network Synchronization Failure</h3>
+                    <p>Unable to fetch payload data from the external public API server. Please check your internet connection status and try again.</p>
+                </div>
+
+            </div>
+            
+            <div class="card-footer">
+                <button id="fetch-trigger-btn" class="action-btn">Fetch Random Quote</button>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>Built with Python Flask • Vanilla JavaScript Fetch API • Custom CSS Grid</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
